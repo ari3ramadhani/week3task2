@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 import 'api.dart';
-import 'modelkampus.dart';
+import 'modelkamus.dart';
 
 class Kamus extends StatefulWidget {
   @override
