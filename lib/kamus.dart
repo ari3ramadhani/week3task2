@@ -1,9 +1,7 @@
 import 'dart:convert';
-
 import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-
 import 'api.dart';
 import 'modelkamus.dart';
 
@@ -81,7 +79,11 @@ class _KamusState extends State<Kamus> {
               color: Colors.green,
               child: Card(
                 child: ListTile(
-                  leading: Icon(Icons.search,color: Colors.black,size: 35,),
+                  leading: Icon(
+                    Icons.search,
+                    color: Colors.black,
+                    size: 35,
+                  ),
                   title: TextField(
                     style: TextStyle(
                         fontSize: 24.0, height: 1.0, color: Colors.black),
@@ -95,7 +97,11 @@ class _KamusState extends State<Kamus> {
                       controller.clear();
                       onSearch('');
                     },
-                    icon: Icon(Icons.cancel_sharp,color: Colors.red,size: 35,),
+                    icon: Icon(
+                      Icons.cancel_sharp,
+                      color: Colors.red,
+                      size: 35,
+                    ),
                   ),
                 ),
               ),

@@ -61,7 +61,7 @@ class _MyAppState extends State<MyApp> {
         _loginStatus = statusLogin.signIn;
         // simpan data ke share preferences
         saveDataPref(value, dataIdUser, dataUsername, dataEmail, dataAlamat,
-            dataSex, dataFullname, dataTanggalDaftar,dataGambar);
+            dataSex, dataFullname, dataTanggalDaftar, dataGambar);
       });
     } else if (value == 2) {
       print(pesan);
@@ -71,7 +71,7 @@ class _MyAppState extends State<MyApp> {
   }
 
   saveDataPref(int value, String dIdUser, dUsername, dEmail, dAlamat, dSex,
-      dFullName, dCreated,dGambar) async {
+      dFullName, dCreated, dGambar) async {
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
     setState(() {
       sharedPreferences.setInt("value", value);

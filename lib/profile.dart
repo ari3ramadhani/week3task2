@@ -36,13 +36,6 @@ class _ProfileState extends State<Profile> {
       gambar = "",
       password = "";
 
-  // getDataPref() async {
-  //   setState(() {
-  //     username = sharedPreferences.getString("username");
-  //
-  //     print(" profile $id_user");
-  //   });
-  // }
   getDataUser() async {
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
 
@@ -104,12 +97,6 @@ class _ProfileState extends State<Profile> {
       "alamat": cAlamat.text,
       "sex": _valGender,
     });
-
-    Scaffold.of(context).showSnackBar(
-      SnackBar(
-        content: Text("Data upgrade"),
-      ),
-    );
   }
 
   @override
@@ -266,7 +253,7 @@ class _ProfileState extends State<Profile> {
                 onPressed: () {
                   setState(() {
                     _openDialog(context);
-                    //editData();
+                    editData();
                   });
                 },
               ),

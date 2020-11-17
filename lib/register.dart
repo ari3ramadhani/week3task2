@@ -5,7 +5,6 @@ import 'dart:convert';
 
 import 'package:week3task2/main.dart';
 
-
 class PageRegister extends StatefulWidget {
   @override
   _PageRegisterState createState() => _PageRegisterState();
@@ -42,8 +41,8 @@ class _PageRegisterState extends State<PageRegister> {
 
   // submit data register
   submitDataRegister() async {
-    final responseData = await http
-        .post(GetLinknya.linknya+"register.php", body: {
+    final responseData =
+        await http.post(GetLinknya.linknya + "register.php", body: {
       "username": nUsername,
       "full_name": nFullName,
       "email": nEmail,
@@ -111,9 +110,8 @@ class _PageRegisterState extends State<PageRegister> {
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(20.0),
                       borderSide:
-                      BorderSide(color: Colors.lightGreen, width: 2.5),
+                          BorderSide(color: Colors.lightGreen, width: 2.5),
                     )),
-
               ),
             ),
             Padding(
@@ -137,9 +135,8 @@ class _PageRegisterState extends State<PageRegister> {
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(20.0),
                       borderSide:
-                      BorderSide(color: Colors.lightGreen, width: 2.5),
+                          BorderSide(color: Colors.lightGreen, width: 2.5),
                     )),
-
               ),
             ),
             Padding(
@@ -163,7 +160,7 @@ class _PageRegisterState extends State<PageRegister> {
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(20.0),
                       borderSide:
-                      BorderSide(color: Colors.lightGreen, width: 2.5),
+                          BorderSide(color: Colors.lightGreen, width: 2.5),
                     )),
               ),
             ),
@@ -188,9 +185,8 @@ class _PageRegisterState extends State<PageRegister> {
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(20.0),
                       borderSide:
-                      BorderSide(color: Colors.lightGreen, width: 2.5),
+                          BorderSide(color: Colors.lightGreen, width: 2.5),
                     )),
-
               ),
             ),
 //radio button
@@ -198,7 +194,10 @@ class _PageRegisterState extends State<PageRegister> {
               padding: EdgeInsets.all(10),
               child: RadioListTile(
                 value: "Laki-laki",
-                title: Text('Laki-laki',style: TextStyle(color: Colors.black),),
+                title: Text(
+                  'Laki-laki',
+                  style: TextStyle(color: Colors.black),
+                ),
                 groupValue: sex,
                 onChanged: (String value) {
                   pilihSex(value);
@@ -212,7 +211,10 @@ class _PageRegisterState extends State<PageRegister> {
               padding: EdgeInsets.all(10),
               child: RadioListTile(
                 value: "Perempuan",
-                title: Text('Perempuan',style: TextStyle(color: Colors.black),),
+                title: Text(
+                  'Perempuan',
+                  style: TextStyle(color: Colors.black),
+                ),
                 groupValue: sex,
                 onChanged: (String value) {
                   pilihSex(value);
@@ -243,9 +245,8 @@ class _PageRegisterState extends State<PageRegister> {
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(20.0),
                       borderSide:
-                      BorderSide(color: Colors.lightGreen, width: 2.5),
+                          BorderSide(color: Colors.lightGreen, width: 2.5),
                     )),
-
               ),
             ),
             Padding(
@@ -257,7 +258,8 @@ class _PageRegisterState extends State<PageRegister> {
                 elevation: 5,
                 height: 35,
                 textColor: Colors.white,
-                child: Text('Register',
+                child: Text(
+                  'Register',
                   style: TextStyle(fontSize: 25),
                 ),
                 onPressed: () {
@@ -271,7 +273,8 @@ class _PageRegisterState extends State<PageRegister> {
               padding: EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 0),
               child: MaterialButton(
                 textColor: Colors.redAccent,
-                child: Text('Sudah Punya Akun ? Silahkan Login',style: TextStyle(fontSize: 15)),
+                child: Text('Sudah Punya Akun ? Silahkan Login',
+                    style: TextStyle(fontSize: 15)),
                 onPressed: () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => MyApp()));

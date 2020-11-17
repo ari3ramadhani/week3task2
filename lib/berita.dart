@@ -131,12 +131,11 @@ class DetailBerita extends StatelessWidget {
                 floating: false,
                 pinned: true,
                 flexibleSpace: FlexibleSpaceBar(
-                    centerTitle: false,
-
-                    background: Image.network(GetLinknya.linknya + list[index]['foto']),),
-
+                  centerTitle: false,
+                  background:
+                      Image.network(GetLinknya.linknya + list[index]['foto']),
+                ),
               ),
-
             ];
           },
           body: ListView(
@@ -149,14 +148,15 @@ class DetailBerita extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
-
                           Text(list[index]['tgl_berita']),
                           Container(
                             padding: EdgeInsets.only(bottom: 8.0),
                             child: Text(
                               list[index]['judul'],
                               style: TextStyle(
-                                  fontWeight: FontWeight.bold, color: Colors.green,fontSize: 20),
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.green,
+                                  fontSize: 20),
                             ),
                           ),
                         ],
@@ -170,10 +170,11 @@ class DetailBerita extends StatelessWidget {
                 ),
               ),
               Container(
-                padding: EdgeInsets.fromLTRB(32,0,32,0),
+                padding: EdgeInsets.fromLTRB(32, 0, 32, 0),
                 child: Text(
                   list[index]['isi'],
-                  softWrap: true,textAlign: TextAlign.justify,
+                  softWrap: true,
+                  textAlign: TextAlign.justify,
                   style: TextStyle(fontSize: 17),
                 ),
               )

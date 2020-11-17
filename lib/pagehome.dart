@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-
 import 'dart:async';
 import 'package:shared_preferences/shared_preferences.dart';
-
 import 'berita.dart';
 import 'kamus.dart';
 import 'profile.dart';
@@ -16,7 +14,8 @@ class PageHome extends StatefulWidget {
   _PageHomeState createState() => _PageHomeState();
 }
 
-class _PageHomeState extends State<PageHome> with SingleTickerProviderStateMixin {
+class _PageHomeState extends State<PageHome>
+    with SingleTickerProviderStateMixin {
   TabController _tabController;
 
   var loading = false;
@@ -26,7 +25,6 @@ class _PageHomeState extends State<PageHome> with SingleTickerProviderStateMixin
     setState(() {
       loading = true; //ketika proses get data set loading nya true
     });
-
   }
 
 //tambahan method signout
@@ -69,18 +67,18 @@ class _PageHomeState extends State<PageHome> with SingleTickerProviderStateMixin
       ),
       bottomNavigationBar: BottomAppBar(
           child: TabBar(
-            labelColor: Colors.lightGreen,
-            unselectedLabelColor: Colors.blueGrey,
-            tabs: [
-              Tab(
-                text: "Home",
-                icon: Icon(Icons.home),
-              ),
-              Tab(text: "Dictionary", icon: Icon(Icons.chat)),
-              Tab(text: "Profile", icon: Icon(Icons.person)),
-            ],
-            controller: _tabController,
-          )),
+        labelColor: Colors.lightGreen,
+        unselectedLabelColor: Colors.blueGrey,
+        tabs: [
+          Tab(
+            text: "Home",
+            icon: Icon(Icons.home),
+          ),
+          Tab(text: "Dictionary", icon: Icon(Icons.chat)),
+          Tab(text: "Profile", icon: Icon(Icons.person)),
+        ],
+        controller: _tabController,
+      )),
     );
   }
 }
