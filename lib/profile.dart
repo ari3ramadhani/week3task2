@@ -15,7 +15,7 @@ class Profile extends StatefulWidget {
   @override
   _ProfileState createState() => _ProfileState();
 }
-
+ 
 class _ProfileState extends State<Profile> {
   String _valGender;
 

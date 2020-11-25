@@ -1,3 +1,3 @@
 class GetLinknya {
-  static final String linknya = "http://192.168.10.42/kesehatan/";
+  static final String linknya = "http://172.16.0.12/flutter/kesehatan/";
 }

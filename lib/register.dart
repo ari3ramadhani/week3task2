@@ -68,18 +68,6 @@ class _PageRegisterState extends State<PageRegister> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 0,
-        title: Text(
-          'Register Form',
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 35.0,
-            color: Colors.black,
-          ),
-        ),
-      ),
       body: Form(
         key: _keyForm,
         child: ListView(
